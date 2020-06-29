@@ -2,7 +2,7 @@
 
 """
 JustPrintIt is a tool for automatically adding and removing print statements for
-debugging purposes. It was quickly hacked together and intented for small programs.
+debugging purposes. It was quickly hacked together and intended for small programs.
 """
 
 import sys
@@ -59,7 +59,7 @@ def remove_lines(file_name):
 Script invocation logic
 """
 
-usage = "Usage : \n\tjustPrintIt -a fileName.cpp | \n\tJustPrintIt -r fileName.cpp"
+usage = "Usage : \n\tjustPrintIt -a fileName.cpp\n\tJustPrintIt -r fileName.cpp"
 
 arg_len = len(sys.argv)
 if arg_len < 3:
