@@ -15,7 +15,7 @@ def ends_in_semicolon(line):
     ends_in_semi = False
     for c in line:
         if c == ';':
-           ends_in_semi = True
+            ends_in_semi = True
         elif c not in ["\t", " ", '\n']:
             ends_in_semi = False
     return ends_in_semi
@@ -32,7 +32,10 @@ def add_lines(file_name):
     lines_to_add = [i for i, v in enumerate(contents) if ends_in_semicolon(v)]
     insert_idxs = [i + v for i, v in enumerate(lines_to_add)]
     for i, v in enumerate(insert_idxs):
-        contents.insert(v, f"std::cout << \"Debug line {i} ........ justPrintIt\" << std::endl;\n")
+        # Get indentation level of print statement
+        white_space_num = len(contents[v]) - len(contents[v].lstrip())
+        spaces = contents[v][:white_space_num]
+        contents.insert(v, f"{spaces}std::cout << \"Debug line {i} ........ justPrintIt\" << std::endl;\n")
     contents = "".join(contents)
 
     f = open(file_name, "w")

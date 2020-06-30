@@ -1,8 +1,6 @@
 # justPrintIt
 
-justPrintIt automatically inserts and removes print statements. Super handy when a small program crashes and you need to find the line that the program crashes at (and for whatever reason its not obvious). justPrintIt is written in Python so it should just run.
-
-
+justPrintIt automatically inserts and removes print statements. Super handy when a small program crashes and you need to find the line that the program crashes at (and for whatever reason its not obvious). justPrintIt is written in Python so it should just run. Currently justPrintIt works for C++ programs.
 
 ## Running
 
